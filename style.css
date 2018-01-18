@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arimo', sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  background: black;
+  color: white;
+  width: 99%;
+}
+
+/*=================
+* TIMER
+*=================*/
+.timer--clock .clock-display-grp {
+  margin-left: 70px;
+}
+
+.text-en {
+	display: block;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 0px;
+}
+
+.text-de {
+	display: block;
+    margin-top: 0px;
+    margin-left: 70px;
+    margin-right: 70px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #fff;
+}
+
+.text-de:last-child {
+  border-bottom: 0;
+}
+
+.timer p {
+    /*font-size: 1.09em;*/
+    color: #fff;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+
+/* responisve */
+@media only screen and (max-width: 1024px) {
+  .timer--clock .time-unit p {
+    margin-top: -1px !important;
+  }
+
+  .timer--clock .clock-separator p {
+    margin-top: -5px !important;
+  }
+
+  .timer--clock .clock-display-grp {
+    margin-left: 70px;
+  }
+
+  .timer--clock .clock-display-grp .number-grp {
+    height: 100px !important;
+  }
+
+  .timer p {
+    font-size: 70px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+    .text-en {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    .timer--clock .clock-display-grp {
+    margin-left: 40px;
+    }    
+
+    .text-de {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .timer--clock .clock-display-grp {
+      margin-left: 40px;
+    }  
+    .timer--clock .time-unit p {
+      margin-top: 0 !important;
+    }
+
+    .timer--clock .clock-separator p {
+      margin-top: -3px !important;
+    }
+
+    .timer--clock .clock-display-grp .number-grp {
+      height: 65px !important;
+    }
+
+    .timer p {
+      font-size: 50px !important;
+    }
+
+    .countdown-text p {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+    .timer--clock .clock-separator {
+      margin-top: 4px;
+    }
+
+    .timer--clock .time-unit {
+      margin-top: 6px;
+    }
+
+    .countdown-text p {
+        margin-left: 0px;
+    }
+}
+
+.countdown-text p {
+    margin-left: 70px;
+    margin-top: 40px;
+}
+
+/*//////////////////////////Countdown//////////////////////////*/
+.timer {
+  height: auto;
+  display: block;
+  color: white;
+  margin: 0 auto;
+}
+
+.timer * {
+  cursor: default;
+}
+
+.timer--clock {
+  width: auto;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.timer--clock .clock-display-grp {
+  width: 100%;
+  position: relative;
+}
+
+.timer--clock .clock-display-grp .number-grp {
+  width: auto;
+  display: block;
+  height: 115px;
+  float: left;
+  overflow: hidden;
+}
+
+.timer--clock .clock-display-grp .number-grp .number-grp-wrp {
+  width: 100%;
+  position: relative;
+}
+
+.timer--clock .clock-display-grp .number-grp .number-grp-wrp .num {
+  width: 100%;
+  position: relative;
+}
+
+.timer--clock .clock-display-grp .number-grp .number-grp-wrp .num p {
+  width: auto;
+  display: table;
+  font-size: 90px;
+}
+
+.timer--clock .clock-separator {
+  width: auto;
+  float: left;
+  display: block;
+  height: 133px;
+}
+
+.timer--clock .time-unit {
+  width: auto;
+  float: left;
+  display: block;
+  height: 133px;
+}
+
+.timer--clock .time-unit p {
+    width: auto;
+    display: table;
+    font-size: 90px;
+    margin-top: 5px;
+}
+
+.timer--clock .clock-separator p {
+  width: auto;
+  display: table;
+  font-size: 75px;
+  margin-top: 10px;
+}
+
+.timer--clock {
+  width: 700px;
+  margin: 0 auto !important;
+}
+
+.timer h4 {
+  width: 100%;
+  font-size: 10px;
+  letter-spacing: 6px;
+  text-align: center;
+  padding-top: 25px;
+  float: left;
+}
+
+.reload {
+  width: 125px;
+  height: 14px;
+  position: absolute;
+  bottom: 50vh;
+  left: 50%;
+  margin-left: -62.5px;
+  opacity: 0;
+  display: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.reload:hover svg path {
+  fill: #fff;
+}
+
+.reload:hover p {
+  color: #fff;
+}
+
+.reload svg {
+  width: 12px;
+  height: 12px;
+  float: left;
+  margin-right: 10px;
+}
+
+.reload p {
+  color: #fff;
+  font-size: 12px;
+  float: left;
+  line-height: 11px;
+}
+
+#online { 
+  display: none;
+  margin-top: 25px;
+  padding-bottom: 25px;
+  font-size: 60px;
+  border: 0;
+}
+
+.reach {
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+
+.days-group {
+  margin: 0 auto !important;
+  display: block;
+  height: 135px;
+  /*width: 340px !important;*/
+}
+
+.clock-display-grp {
+  margin: 0 auto !important;
+}
+
+.date {
+  margin: 0 !important;
+  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+  font-weight: bolder;
+}
